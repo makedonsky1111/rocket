@@ -1,0 +1,666 @@
+$section-width: 960px;
+$main-font-color: #B5B5B5;
+$second-font-color: white;
+$headings-font-color: #013243;
+$special-dott-color: #FF4E00;
+$font-family: 'Montserrat', sans-serif;
+
+p, h1, h2, h3, h4, h5, h6, span, a, div, section {
+    font-family: $font-family;
+}
+
+body {
+    position: relative;
+}
+
+section {
+    box-sizing: border-box;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #1093C1;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: $section-width;
+}
+
+.logo {
+    width: 210px;
+    height: 70px;
+    background-image: url(../img/293982-0-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+}
+
+.live-chat {
+    height: 45px;
+    width: 145px;
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F04040;
+    border-radius: 5px;
+    
+    .img {
+    height: 45px;
+    width: 45px;
+    background-image: url(../img/294994-0-icohelp.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    float: right;
+    }
+    
+    a {
+    font-size: 18px;
+    color: $second-font-color;
+    line-height: 45px;
+    text-decoration: none;
+    }
+}
+
+/************** Rocket-animation ****************/
+
+.animation {
+    height: 500px;
+    width: 800px;
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    z-index: auto;
+   
+    .rocket {
+        width: 800px;
+        height: 500px;
+        position: absolute;
+        background-image: url(../img/rocket.png);
+        left: -50px;
+        top: 70px;
+        animation: move 1s alternate
+         infinite;
+        animation-timing-function: linear;
+        @keyframes move {
+        from { 
+            transform: translateY(5px)  translateX(0);
+            }
+        50% {
+            transform:translateY(-3px) 
+            translateX(-3px);
+            }
+        75% {
+            transform:translateY(3px) 
+            translateX(3px);   
+            }
+        to { 
+            transform:translateY(-5px) 
+            translateX(10px);
+            }
+        }
+    }
+
+    .clouds {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        .cloud1, .cloud2 {
+        @extend .clouds;
+        left: 150px;
+        background-image: url(../img/cloud.png);
+        animation: clouds-move 3500ms linear
+        infinite;
+        @keyframes clouds-move {
+        from { 
+            transform: translateY(0px)                            translateX(0);
+            }
+        55% {
+            opacity: 0.3;
+            }
+        to { 
+            transform:translateY(250px) 
+                      translateX(-250px);
+            opacity: 0;
+            }
+        }  
+        }
+        
+        .cloud2 {
+            top: 200px;
+            left: 500px;
+            animation-delay: 300ms;
+            z-index: 1;
+        }
+     } 
+}
+
+/*************** Rocket-animation end **************/
+
+.top-section {
+   background-color: #1093C1;
+    .center {
+        position: relative;  
+    }
+}
+
+.main-losungs {
+    height: 400px;
+    z-index: 2;
+}
+.main-losungs p {
+    font-size: 70px;
+    line-height: 70px;
+    color: $second-font-color;
+}
+
+ .main-losungs .heading {
+    color: $headings-font-color;
+}
+
+ .heading span {
+    color: #FF4E00;
+}
+
+.main-losungs .smal-losung {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/*********** section 2 ***************/
+.try-demo {
+    height: 390px;
+    width: 100%;
+    padding-top: 40px;
+    z-index: 2;
+}
+
+.form-vraper {
+    width: 350px;
+    height: 390px;
+    position: relative;
+    float: left;
+}
+
+.demo-form input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid $main-font-color;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.demo-form input:nth-child(4) {
+    margin-bottom: 5px;
+}
+
+.demo-form input[type="submit"] {
+    background-color: #D43B3B;
+    border-radius: 0;
+    color: $second-font-color;
+    font-size: 20px;
+}
+
+.cPanel {
+    height: 50px;
+    width: 350px;
+    z-index: 2;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    top: -90px;
+    left: -25px;
+    padding-top: 20px;
+    background-color: white;
+}
+
+.cPanel p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 25px;
+    color: $headings-font-color;
+    z-index: 2;
+}
+
+.lozung {
+    float: right;
+    width: 360px;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: bolder;
+    color: #1093C1;
+    z-index: 2;
+}
+
+.lozung-discription {
+    font-size: 12px;
+    line-height: 25px;
+    color: $main-font-color;
+}
+
+/***************** section 3 ***********************/
+
+.features {
+    background-image: url(../img/294996-0-parallax43.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 730px;
+    width: 100%;
+    padding: 45px;
+}
+
+.features-heading {
+    width: 200px;
+    margin-bottom: 45px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    color: $second-font-color;
+    margin-bottom: 0;
+}
+
+.special-dot {
+    color: $special-dott-color;
+}
+
+.line {
+    width: 115px;
+    height: 10px;
+    border-bottom: 3px solid white;
+}
+
+.ficha {
+    height: 240px;
+    width: 160px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    display: inline-block;
+}
+
+.fichure-img {
+    height: 130px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+}
+
+.awarded .fichure-img { background-image: url(../img/294986-0-icoflag.png);}
+.costamisible .fichure-img {background-image: url(../img/294987-0-icocostum.png);}
+.responsive .fichure-img {background-image: url(../img/294989-0-icomoney.png);}
+.affordable .fichure-img {background-image: url(../img/294988-0-icolaptop.png);}
+.marceting .fichure-img {background-image: url(../img/294990-0-icosales.png);}
+.support .fichure-img {background-image: url(../img/294991-0-icosupport.png);}
+.backup .fichure-img {background-image: url(../img/294992-0-icocloud.png);}
+.page-bilder .fichure-img {background-image: url(../img/294993-0-icopagebuilder.png);}
+
+.fichure-title {
+    font-size: 18px;
+    line-height: 25px;
+    color: $headings-font-color;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.fichure-discription {
+    font-size: 14px;
+    line-height: 20px;
+    color: $main-font-color;
+    text-align: center;
+}
+
+/************ SECTION 4 ***********************/
+
+.mor-information {
+    height: 370px;  
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    
+}
+
+.list {
+    float: left;
+    margin-top: 10px;
+}
+
+.list li {
+    font-size: 18px;    
+    line-height: 35px;
+    color: $main-font-color;
+}
+.list h3 {
+    font-size: 22px;    
+    line-height: 31px;
+    font-weight: bold; 
+    color: $headings-font-color;
+    margin-bottom: 15px;
+}
+.laptop {
+    height: 370px;
+    width: 500px;
+    float: right;
+    background-image: url(../img/294977-0-laptop.jpg);
+    background-position: center;
+    background-repeat:  no-repeat;
+    position: relative;
+}
+
+.skrin {
+    position: absolute;
+    top: 42px;
+    left: 82px;
+}
+
+.lern-more-btn {
+    margin-top: 25px;
+    width: 130px;
+    height: 45px;
+    background-color: #4C9FA7;
+    border-radius: 5px;
+}
+
+.lern-more-btn a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    line-height: 45px;
+    color: $second-font-color;
+}
+
+/***************** SECTION 5******************/
+
+
+.prices {
+    height: 615px;
+    width: 100%;
+    background-image: url(../img/294995-0-parallaxback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;  
+}
+
+.prices-heading {
+    color: $headings-font-color;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prices-heading p, .prices-heading .line {
+    color: $headings-font-color;
+    border-color: $headings-font-color;
+}
+
+.prise-list {
+    width: 215px;
+    height: 390px;
+    background-color: #013243;
+    float: left;
+    margin-top: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    border-radius: 5px;
+    
+    li, a {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 25px;
+        color: $second-font-color;
+        text-align: center;
+        font-family: arial, sans-serif;
+        
+    }
+}
+
+.panel-line {
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    width: 85%;
+    border-bottom: 1px solid #336680;
+}
+
+.big-price {
+    font-size: 42px;
+    
+    color: $second-font-color;
+    text-align: center;
+    margin-top: 20px;
+    
+    span {
+       font-size: 22px; 
+    }
+}
+
+.prise-list-heading {
+    font-size: 20px;
+    line-height: 45px; 
+    color: $second-font-color;
+    text-align: center;
+    background-color: #8EBD56;
+    height: 45px;
+    border-radius: 5px 5px 0 0;
+}
+
+.mo {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #336680;
+}
+
+.sign-up {
+    display: block;
+    position: absolute;
+    width: 135px;
+    height: 40px;
+    padding: 8px;
+    line-height: 40px;
+    background-color: #4BA579;
+    left: 40px;
+    bottom: -20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.bes-deal {
+    background-color: rgba(240, 189, 32, 0.9);
+    border-radius: 50%;
+    color: $second-font-color;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: -10%;
+    top: -50%;
+    z-index: 2;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.advanced {
+    padding-top: 45px;
+    box-sizing: border-box;
+    
+    .prise-list-heading {
+        background-color: #E85E76;
+        height: 55px;
+        width: 100%;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+    
+    .sign-up {
+        background-color: #E85E76;
+    }
+}
+
+.bisnes {
+    .prise-list-heading, .sign-up {
+        background-color: #56B4BD;
+    }  
+}
+
+.ultra {
+    .prise-list-heading, .sign-up {
+        background-color: #8061A1;   
+    }  
+}
+
+
+/************** section 5 *************/
+
+.testimonials {
+    height: 405px;
+    width: 100%;
+    background-color: #64B2BF;
+    padding-top: 40px;
+}
+
+.left-control, .right-control {
+    height: 200px;
+    width: 50px;
+    background-image: url(../img/294999-0-arrowleft.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    a {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+
+.right-control {
+    background-image: url(../img/294998-0-arrowright.png);
+    float: right;
+}
+
+.slider p {
+    color: $second-font-color;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+}
+
+.avatar {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    
+    p {
+        color: $second-font-color;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    
+    span {
+        color: $second-font-color;
+        font-size: 14px;
+    }
+}
+
+.avatar-img {
+    height: 100px;
+    width: 100px;
+    background-image: url(../img/294997-0-test.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+/********** section 6 **************/
+
+.clients {
+    height: 265px;
+    padding-top: 45px;
+}
+
+.clients-lables {
+    height: 150px;
+    width: 100%;
+    background-image: url(../img/295000-0-clients.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    background-color: #E1E1E1;
+    height: 75px;
+    width: 100%;
+    p {
+      float: left;
+      color: $main-font-color;
+      line-height: 75px;
+      font-size: 14px;
+    }
+    span {
+        font-weight: bold;
+    }
+    .social-icons {
+        float: right;
+        height: 35px;
+        width: 150px;
+        a {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 20px;
+        }
+        .tviter {
+            background-image: url(../img/294046-0-twittervariation.png);
+        }
+        .fb {
+            background-image: url(../img/294044-0-facebookvariation.png);
+        }
+        .in {
+            background-image: url(../img/294045-0-linkedinvariation.png);
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
