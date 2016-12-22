@@ -1,12 +1,18 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
-    scss = require('gulp-sass');
+    scss = require('gulp-sass'),
+    useref = require('gulp-useref');
    
 
 gulp.task('default', function() {
   // place code for your default task here
 });
 
+gulp.task('useref', function () {
+    return gulp.src('src/*.html')
+        .pipe(useref())
+        .pipe(gulp.dest('app'));
+});
 
 gulp.task('js', function() {
     return gulp.src('js/*js')
@@ -18,14 +24,14 @@ gulp.task('js', function() {
 gulp.task('scss', function() {
     return gulp.src('src/styles/*.scss')
         .pipe(scss())
-        .pipe(gulp.dest('app/styles/css'))
+        .pipe(gulp.dest('src/styles/css'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: { 
-            baseDir: 'app'
+            baseDir: 'src'
         },
         notify: false,
         tunnel: true

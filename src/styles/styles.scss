@@ -1,0 +1,192 @@
+$key-bg: #161920;
+$key-height-main: 50px;
+$key-width-main: 50px;
+$key-height-smal: 30px;
+$key-font-size: 18px;
+$color: #CFCFCF;
+
+.wraper {
+    height: 310px;
+    width: 750px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: #E3E3E3;
+}
+
+.key-row {
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+}
+
+.key {
+    height: $key-height-main;
+    width: $key-width-main;
+    background-color: $key-bg;
+    margin: 1px;
+    text-align: center;
+    line-height: 40px;
+    color: $color;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+}
+
+.key-row1 {
+    .key{
+        height: $key-height-smal;
+        line-height: 20px;
+        font-size: 10px;
+    }
+    .key1-1{
+        width: 75px;
+        text-align: left;
+    }
+    .key1-14{
+        image {
+        position: absolute;
+        top: 100px;
+        }
+    }
+}
+
+.key-row2 {
+    
+    span {
+        font-size: 12px; 
+        line-height: 16px;  
+    }
+    .key {
+        line-height: 18px;
+        font-size: 18px;
+    }
+    .key2-1 {
+        line-height: 20px;
+        font-size: 20px;
+    }
+    .key2-14 {
+        width: 75px;
+        text-align: right;
+        font-size: 12px;
+        line-height: 62px;
+    }
+}
+
+/************ row 3 ************/
+
+.key3-1 {
+        width: 75px;
+    }
+
+.key3-12, .key3-13, .key3-14 {
+    line-height: 18px;
+    font-size: 12px;  
+}
+
+/************ row 4 ************/
+
+.lite {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 3px;
+}
+.key4-1, .key4-13 {
+        width: 88px;
+    }
+.key4-1 {
+    text-align: left;
+    padding-left: 10px;
+}
+.key4-11, .key4-12, .key4-14 {
+    line-height: 18px;
+    font-size: 14px;  
+}
+
+/************ row 5 ************/
+
+.key5-1, .key5-12 {
+        width: 114px;
+    }
+
+ .key5-9, .key5-10, .key5-11 {
+    line-height: 18px;
+    font-size: 14px;  
+}
+
+/************ row 5 ************/
+
+.key-row6 .key {
+    font-size: 10px;
+    line-height: 20px;
+    color: white;
+}
+
+.key6-4, .key6-6 {
+    width: 62px;
+}
+
+.key6-5 {
+    width: 258px;
+}
+
+.key6-9{
+    background-color: $key-bg;
+    .key6-8 {
+        padding: 20px;
+    }
+    .key6-10 {
+        padding: 20px;
+    }
+    .key6-9-1, .key6-9-2 {
+    background-color: $key-bg;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
