@@ -5,6 +5,20 @@ $key-height-smal: 30px;
 $key-font-size: 18px;
 $color: #CFCFCF;
 
+textarea {
+    display: block;
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #E3E3E3;
+    color: #161920;
+    font-size: 24px;
+}
+
 .wraper {
     height: 310px;
     width: 750px;
